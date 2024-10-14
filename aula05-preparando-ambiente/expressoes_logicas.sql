@@ -32,4 +32,3 @@ WHERE (CIDADE IN ('Rio de Janeiro', 'Sao Paulo')) AND IDADE >= 20;
 
 SELECT * FROM TABELA_DE_CLIENTES
 WHERE (CIDADE IN ('Rio de Janeiro', 'Sao Paulo')) AND (IDADE BETWEEN 20 AND 25);
-
