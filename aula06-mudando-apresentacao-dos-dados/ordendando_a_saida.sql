@@ -1,0 +1,41 @@
+-- Decrescente
+SELECT * FROM TABELA_DE_PRODUTOS
+ORDER BY PRECO_DE_LISTA DESC;
+
+-- Crescente (default)
+SELECT * FROM TABELA_DE_PRODUTOS
+ORDER BY PRECO_DE_LISTA ASC;
+
+
+-- Decrescente Alfabeto
+SELECT * FROM TABELA_DE_PRODUTOS
+ORDER BY NOME_DO_PRODUTO DESC;
+
+-- Crescente Alfabeto
+SELECT * FROM TABELA_DE_PRODUTOS
+ORDER BY NOME_DO_PRODUTO ASC;
+
+--
+
+SELECT * FROM TABELA_DE_PRODUTOS
+ORDER BY EMBALAGEM, NOME_DO_PRODUTO;
+
+SELECT * FROM TABELA_DE_PRODUTOS
+ORDER BY EMBALAGEM DESC, NOME_DO_PRODUTO DESC;
+
+
+--
+
+SELECT TOP 5 * FROM TABELA_DE_PRODUTOS
+ORDER BY PRECO_DE_LISTA;
+
+-- Desafio : Utilizando o banco de dados trabalhado em aula, execute duas querys SQL e identifique:
+-- Qual foi a maior venda do produto "Linha Refrescante - 1 Litro - Morango/Limao" em quantidade?
+
+SELECT * FROM TABELA_DE_PRODUTOS
+WHERE NOME_DO_PRODUTO LIKE '%Linha Refrescante%' AND TAMANHO = '1 Litro' AND SABOR LIKE '%Morango%';
+
+SELECT * FROM ITENS_NOTAS_FISCAIS
+WHERE codigo_do_produto = '1101035'
+ORDER BY QUANTIDADE DESC;
+
